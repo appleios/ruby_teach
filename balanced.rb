@@ -15,5 +15,5 @@ def balanced(text)
 	s.empty? # balanced if stack is empty
 end
 
-puts "balanced" if balanced(%q{this text contains [pars (()()) (and(can be) very ) complex]. But ((it) is) [balanced].})
+puts "balanced" if balanced(%q{this teXt contains [pars (()()) (and(can be) very ) complex]. But ((it) is) [balanced].})
 puts "not balanced" unless balanced(%q{this is (()))() not balanced.})
