@@ -9,7 +9,7 @@ s = "12 abc 45 def 678"
 puts sum(s)
 
 # by Petr Gurinov
-s.scan(/\d+/).inject(0) { |result, elem| result + elem.to_i } 
+puts s.scan(/\d+/).inject(0) { |result, elem| result + elem.to_i } 
 
 # 2
 class String
@@ -18,9 +18,9 @@ class String
 	end
 end
 
-puts "aziz.latypov@mail.ru".is_email? 	? "Yes" : "No"
-puts "123-mail.ru".is_email? 			? "Yes" : "No"
-puts "123.mail.ru".is_email? 			? "Yes" : "No"
+puts "aziz.latypov@mail.ru".is_email?   ? "Yes" : "No"
+puts "123-mail.ru".is_email?            ? "Yes" : "No"
+puts "123.mail.ru".is_email?            ? "Yes" : "No"
 
 # 3 
 class String
@@ -29,9 +29,9 @@ class String
 	end
 end
 
-puts "10.0".is_float? ? "Yes" : "No"
-puts "10.".is_float? 	? "Yes" : "No"
-puts "10".is_float? 	? "Yes" : "No"
+puts "10.0".is_float?   ? "Yes" : "No"
+puts "10.".is_float?    ? "Yes" : "No"
+puts "10".is_float?     ? "Yes" : "No"
 
 # 4
 text = "There're. Four. Sentences. And six Words."
@@ -48,8 +48,8 @@ def remove(text, words)
 	newText.join(' ')
 end
 
-text.split(/\s+/).delete_if { |w| words.include? w }  # by Dima Sablin
-text.split(/\s+/) - words                             # by Elbek Juraev
+puts text.split(/\s+/).delete_if { |w| words.include? w }.join(' ')  # by Dima Sablin
+puts (text.split(/\s+/) - words).join(' ')                           # by Elbek Juraev
 
 puts remove(text, words)
 
@@ -100,7 +100,7 @@ class String
 	end
 end
 
-# and more advanced version
+# more advanced way
 
 class String
 	def regexp_with(ary)
