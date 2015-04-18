@@ -92,7 +92,7 @@ class String
 				when "{"; s << "}"
 				end
 			elsif %w!) ] }!.include? l
-				return false if s.empty? or s.pop != l
+				return false if s.empty? or s.pop != l # s.empty? can be safely removed
 			end
 		end
 	
@@ -116,7 +116,8 @@ class String
 			if i
 				s << close[i]
 			else
-				return false if s.empty? or s.pop != l
+				return false if s.empty? or s.pop != l # s.empty? can be safely removed
+				# return false if s.pop != l # is s.empty? than s.pop returns nil
 			end
 		end
 	
